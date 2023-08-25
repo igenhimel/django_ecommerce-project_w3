@@ -3,9 +3,18 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Product(models.Model):
+
+    PRODUCT_TYPE_CHOICES = [
+        ('Electronics', 'Electronics'),
+        ('Fashion', 'Fashion'),
+        ('Groceries', 'Groceries'),
+        ('Home & Lifestyle', 'Home & Lifestyle'),
+    ]
+
     product_id = models.AutoField(primary_key=True)
     product_name = models.CharField(max_length=255)
-    product_type = models.CharField(max_length=255)
+    product_type = models.CharField(
+        max_length=255, choices=PRODUCT_TYPE_CHOICES)
     product_details = models.TextField()
     product_price = models.DecimalField(
         max_digits=10, decimal_places=2, default=0.00, validators=[MinValueValidator(0)])
