@@ -90,20 +90,25 @@ volumes:
 docker-compose up -d
 ```
 
-5. **Accessing PostgreSQL and pgAdmin:**
+5. Once the containers are up and running, you can navigate back to the parent directory using the cd .. command:
+
+```bash
+cd ..
+```
+6. **Accessing PostgreSQL and pgAdmin:**
 
    - PostgreSQL: The PostgreSQL container will run on port `5432`. You can access it using the connection details specified in the `docker-compose.yaml` file.
 
    - pgAdmin: The pgAdmin web interface will be available at `http://localhost:8080`. Use the email and password specified in the `docker-compose.yaml` file to log in.
 
-6. **Creating a Database:**
+7. **Creating a Database:**
 
    - Open pgAdmin in your web browser.
    - Log in using the provided credentials.
    - In pgAdmin, create a new server connection using the PostgreSQL container's information (host: `postgres`, port: `5432`, username: `your_db_user`, password: `your_db_password`).
    - Once connected, you can create a new database
 
-7. **Configuring the `.env` file:** Update the `.env` file in your PrimePicks project root directory with the database connection details:
+8. **Configuring the `.env` file:** Update the `.env` file in your PrimePicks project root directory with the database connection details:
 
 ```dotenv
 DATABASE_NAME=your_database_name
