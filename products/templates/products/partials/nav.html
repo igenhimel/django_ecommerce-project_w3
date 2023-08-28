@@ -11,8 +11,8 @@
                 <!-- Form for large devices -->
                 <form class="form-inline d-none d-lg-block" method="get" action="{% url 'products:search' %}">
                     <div class="input-group">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="query"
-                            required>
+                        <input class="form-control" type="search" placeholder="Search In PrimePicks" aria-label="Search"
+                            name="query" required>
                         <button type="submit" class="btn btn-warning">Search</button>
                     </div>
                 </form>
@@ -22,7 +22,8 @@
     <!-- Form for medium and small devices -->
     <form class="form-inline d-block d-lg-none mt-2" method="get" action="{% url 'products:search' %}">
         <div class="input-group">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="query" required>
+            <input class="form-control" type="search" placeholder="Search In PrimePicks" aria-label="Search"
+                name="query" required>
             <button type="submit" class="btn btn-warning">Search</button>
         </div>
     </form>
