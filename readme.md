@@ -120,20 +120,22 @@ SECRET_KEY=yoursecretkey
 
 To access the Django admin interface and manage the PrimePicks platform:
 
-1. Create a superuser account:
-
-```bash
-python manage.py createsuperuser
-```
-
-2. Enter your desired username, email, and password.
-
-3. Apply migrations if not done previously:
+1. Apply migrations if not done previously:
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
+
+
+2. Create a superuser account:
+
+```bash
+python manage.py createsuperuser
+```
+
+3. Enter your desired username, email, and password.
+
 
 # Using Django Admin
 
