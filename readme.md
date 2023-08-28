@@ -8,6 +8,7 @@ PrimePicks is an e-commerce platform built using Django, allowing users to brows
 3. [Project Features and Details](#project-features-and-details)
 4. [Using Django Admin](#using-django-admin)
 5. [Creating Superuser and Running Migrations](#creating-superuser-and-running-migrations)
+6. [Project Features](#Using-PrimePicks-E-commerce-Website)
 
 ## Django Run Process
 
