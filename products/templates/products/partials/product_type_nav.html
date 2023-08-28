@@ -13,11 +13,11 @@
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'products:product_type_search' 'Electronics' %}"
-                        class="nav-link btn btn-outline-secondary me-2 border-1 rounded-pill {% if request.resolver_match.kwargs.product_type == 'Electronics' %}active text-dark{% endif %}">Electronics</a>
+                        class="nav-link btn btn-outline-secondary me-2 border-1 rounded-pill {% if request.resolver_match.kwargs.product_type == 'Electronics' %}active text-light{% endif %}">Electronics</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'products:product_type_search' 'Groceries' %}"
-                        class="nav-link btn btn-outline-secondary me-2 border-1 rounded-pill v{% if request.resolver_match.kwargs.product_type == 'Groceries' %}active text-light{% endif %}">Groceries</a>
+                        class="nav-link btn btn-outline-secondary me-2 border-1 rounded-pill {% if request.resolver_match.kwargs.product_type == 'Groceries' %}active text-light{% endif %}">Groceries</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'products:product_type_search' 'Home & Lifestyle' %}"

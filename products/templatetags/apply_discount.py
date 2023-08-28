@@ -9,7 +9,6 @@ def apply_discount(product_price, product_discount):
         price = float(product_price)
         discount_percentage = int(product_discount)
         discounted_price = price - (price * (discount_percentage / 100))
-        # Format the result to two decimal places
         return f"{discounted_price:.2f}"
     except (ValueError, TypeError):
         return ""

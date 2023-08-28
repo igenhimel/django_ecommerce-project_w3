@@ -1,6 +1,7 @@
 {% include 'products/partials/haeder.html' %}
 {% include 'products/partials/nav.html' %}
 {% include 'products/partials/alert.html' %}
+{% load apply_discount %}
 <section class="container">
     <h2 class="text-center mt-2">Search Results for "{{ query }}"</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-3">
@@ -13,14 +14,22 @@
                         class="card-img-top product-image">
                     <div class="card-body">
                         <h5 class="card-title lead">{{ product.product_name }}</h5>
-                        <p class="card-text m-0">${{ product.product_price }}</p>
+
+                        {% if product.product_discount > 0 %}
+                        <span class="text-muted text-decoration-line-through">${{ product.product_price}}</span>
+                        <span
+                            class="card-text m-0">${% apply_discount product.product_price product.product_discount %}</span>
+                        <br>
+
                         <small class="d-block small btn btn-danger text-light btn-small">{{ product.product_discount }}%
                             off</small>
+                        {% else %}
+                        <p class="card-text m-0">${{ product.product_price}}</p>
+                        {% endif %}
                         <small class="d-inline">Product Quality </small>
                         {% for _ in "12345" %}
                         <small><i class="fa-solid fa-star text-warning text-center"></i></small>
                         {% endfor %}
-
 
                     </div>
 

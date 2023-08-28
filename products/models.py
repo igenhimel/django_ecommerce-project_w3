@@ -3,7 +3,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Product(models.Model):
-
+    # Choices for the product type
     PRODUCT_TYPE_CHOICES = [
         ('Electronics', 'Electronics'),
         ('Fashion', 'Fashion'),
@@ -11,6 +11,7 @@ class Product(models.Model):
         ('Home & Lifestyle', 'Home & Lifestyle'),
     ]
 
+    # Fields for the Product model
     product_id = models.AutoField(primary_key=True)
     product_name = models.CharField(max_length=255)
     product_type = models.CharField(
@@ -27,6 +28,7 @@ class Product(models.Model):
 
 
 class Review(models.Model):
+
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name='reviews')
     review_text = models.TextField()
