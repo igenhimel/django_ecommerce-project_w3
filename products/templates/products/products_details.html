@@ -38,7 +38,7 @@
                         <div class="review-content ml-3">
                             {{ review.review_text|linebreaksbr }}
                             <br>
-                            <small>Posted on: {{ review.created_at }}</small>
+                            <small>Posted on: {{ review.created_at|date:"d M Y" }}</small>
                         </div>
                     </div>
                 </li>

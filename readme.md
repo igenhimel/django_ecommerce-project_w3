@@ -106,13 +106,11 @@ docker-compose up -d
 7. **Configuring the `.env` file:** Update the `.env` file in your PrimePicks project root directory with the database connection details:
 
 ```dotenv
-DATABASE_ENGINE=django.db.backends.yourdb #postgresql / sqlite
 DATABASE_NAME=your_database_name
 DATABASE_USER=your_db_user
 DATABASE_PASSWORD=your_db_password
 DATABASE_HOST=your_host
 DATABASE_PORT=your_db_port
-SECRET_KEY=yoursecretkey
 ```
 
 
