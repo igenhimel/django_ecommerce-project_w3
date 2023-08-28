@@ -46,7 +46,7 @@ Before you proceed, make sure you have Docker and Docker Compose installed on yo
 
 To set up the PostgreSQL database for PrimePicks using Docker, follow these steps:
 
-1. **Create a `docker` folder:** In your PrimePicks project directory, create a folder named `docker`.
+1. **Create a `docker` folder:** In your project root directory, create a folder named `docker`.
 
 2. **Inside the `docker` folder, create a `docker-compose.yaml` file:** Copy the following content into the `docker-compose.yaml` file:
 
